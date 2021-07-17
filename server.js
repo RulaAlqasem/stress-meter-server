@@ -10,13 +10,8 @@ const app = express();
 const server = http.createServer(app);
 const mongoose = require('mongoose');
 app.use(express.json());
-mongoose.connect(
-  'mongodb+srv://dana1234:dana1234@cluster0.zbuav.mongodb.net/stressMeter?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-);
+mongoose.connect(process.env.MONGOOB_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true });
 const UserSchema = new mongoose.Schema({
   studentName: { type: String },
   userId: { type: String },

@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const http = require('http');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 const userRoom = '';
 const { v4: uuidv4 } = require('uuid');
 const io = require('socket.io');
@@ -9,10 +9,9 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 const mongoose = require('mongoose');
-
+const mongo = process.env.MONGOOB_URI;
 app.use(express.json());
-mongoose.connect(process.env.MONGOOB_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongo, { useNewUrlParser: true, useUnifiedTopology: true });
 const UserSchema = new mongoose.Schema({
   studentName: { type: String },
   userId: { type: String },

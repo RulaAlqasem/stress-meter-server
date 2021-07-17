@@ -19,6 +19,10 @@ const UserSchema = new mongoose.Schema({
   
 });
 const UserModel = mongoose.model('user', UserSchema);
+app.get('/', (req, res) => {
+  res.send('Hello world');
+});
+
 const socket = io(server, {
   cors: {
     origin: '*',
@@ -112,6 +116,3 @@ function questionDataBase(request, response) {
   response.send(Users);
   Users.save();
 }
-app.get('/', (req, res) => {
-  res.send('Hello world');
-});

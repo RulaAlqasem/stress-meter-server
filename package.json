@@ -1,15 +1,8 @@
 {
-  "name": "server",
+  "name": "stress-meter-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
@@ -18,5 +11,21 @@
     "mongoose": "^5.13.2",
     "nodemon": "^2.0.12",
     "socket.io": "^4.1.3"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dana-younis/stress-meter-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dana-younis/stress-meter-server/issues"
+  },
+  "homepage": "https://github.com/dana-younis/stress-meter-server#readme"
 }

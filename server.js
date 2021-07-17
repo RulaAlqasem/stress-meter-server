@@ -16,6 +16,7 @@ const UserSchema = new mongoose.Schema({
   studentName: { type: String },
   userId: { type: String },
   counter: { type: String },
+  
 });
 const UserModel = mongoose.model('user', UserSchema);
 const socket = io(server, {

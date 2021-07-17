@@ -111,3 +111,6 @@ function questionDataBase(request, response) {
   response.send(Users);
   Users.save();
 }
+app.get('/', (req, res) => {
+  res.send('Hello world');
+});
